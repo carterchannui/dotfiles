@@ -25,6 +25,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+" Current Theme
 " Theme: tokyonight
 let g:tokyonight_transparent=1
 let g:tokyonight_style="storm"
