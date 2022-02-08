@@ -3,32 +3,24 @@ set noswapfile
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-" Themes:
-" Plug 'ghifarit53/tokyonight-vim'
+" List of Themes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Plug 'ghifarit53/tokyonight-vim'
 " Plug 'projekt0n/github-nvim-theme'
 " Plug 'EdenEast/nightfox.nvim'
 " Plug 'marko-cerovac/material.nvim'
 " Plug 'tiagovla/tokyodark.nvim'
 " Plug 'rebelot/kanagawa.nvim'
-" Airline:
-Plug 'itchyny/lightline.vim'
-" PearTree:
-Plug 'tmsvg/pear-tree'
-" PolyGlot:
-" Plug 'sheerun/vim-polyglot'
-" Telescope:
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-" TreeSitter:
+
+" List of Tools
+Plug 'itchyny/lightline.vim'		" Lightline status bar 
+Plug 'tmsvg/pear-tree'			" Pear-tree auto-pair 
+Plug 'nvim-lua/plenary.nvim'		" Module for async programming
+Plug 'nvim-telescope/telescope.nvim'	" Telescope fuzzy finder
+Plug 'tpope/vim-fugitive'		" Git wrapper
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Fugitive:
-Plug 'tpope/vim-fugitive'
-
-
-" List ends here. Plugins become visible to Vim after this call.
 call plug#end()
-" Current Theme
+
 " Theme: tokyonight
 let g:tokyonight_transparent=1
 let g:tokyonight_style="storm"
@@ -44,13 +36,6 @@ colorscheme tokyonight
 " Theme: material
 " let g:material_style = "palenight"
 " colorscheme material
-
-" Theme: tokyodark
-" let g:tokyodark_transparent_background = 0
-" let g:tokyodark_enable_italic_comment = 1
-" let g:tokyodark_enable_italic = 1
-" let g:tokyodark_color_gamma = "1.0"
-" colorscheme tokyodark
 
 " Theme: kanagawa
 " colorscheme kanagawa
@@ -68,7 +53,7 @@ let g:lightline = {
       \ },
       \ }
 
+" Mappings
 inoremap jk <Esc>
-
 nnoremap ff :Telescope find_files theme=dropdown<CR>
 
