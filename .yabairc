@@ -15,7 +15,10 @@ sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=off
-yabai -m rule --add app=Firefox border=off
+
+# yabai -m rule --add app[!]="^Alacritty$" border=off
+
+# yabai -m rule --add app=Firefox border=off
 
 
 # global settings

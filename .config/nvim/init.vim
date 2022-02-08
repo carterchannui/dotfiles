@@ -22,6 +22,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " TreeSitter:
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Fugitive:
+Plug 'tpope/vim-fugitive'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -55,8 +58,17 @@ colorscheme tokyonight
 " Airline:
 set noshowmode
 let g:lightline = {	
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'ayu_mirage',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
       \ }
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+inoremap jk <Esc>
+
+nnoremap ff :Telescope find_files theme=dropdown<CR>
 
