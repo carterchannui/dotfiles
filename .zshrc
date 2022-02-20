@@ -1,6 +1,8 @@
 # Prompt
-autoload -U promptinit; promptinit
-prompt suse
+# autoload -U promptinit; promptinit
+# prompt suse
+
+PROMPT='%(?.%F{green}√.%F{red}%?%f) %F{blue}%~ >%f '
 
 # Terminal Colors
 export CLICOLOR=1

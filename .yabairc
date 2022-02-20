@@ -13,13 +13,10 @@
 #
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-
 yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=off
-
+yabai -m rule --add label="Stats" app="^Stats$" title=".*" manage=off
 yabai -m rule --add app!="^Alacritty$" border=off
-
 # yabai -m rule --add app=Firefox border=off
-
 
 # global settings
 yabai -m config mouse_follows_focus          off
@@ -30,10 +27,13 @@ yabai -m config window_shadow                on
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.70
-yabai -m config window_border                on
+yabai -m config normal_window_opacity        1.0
+yabai -m config window_border                off
 yabai -m config window_border_width          6
-yabai -m config active_window_border_color   0xd80476d0
+#yabai -m config active_window_border_color   0xd80476d0	# Blue
+yabai -m config active_window_border_color   0xd800d7ff		# Cyan
+#yabai -m config active_window_border_color   0xd800e600	# Green
+# yabai -m config active_window_border_color   0xd800ff80	# Light Green
 yabai -m config normal_window_border_color   0xff555555
 yabai -m config insert_feedback_color        0xffd75f5f
 yabai -m config split_ratio                  0.50

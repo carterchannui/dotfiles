@@ -9,7 +9,7 @@
 # to the user's home directory starting with `~/`.
 # Current Theme
 import:
-  - ~/.config/alacritty/ayu-mirage.yml
+ - ~/.config/alacritty/ayu-mirage.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -61,13 +61,13 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  decorations: buttonless
 
   # Background opacity
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.7
+  opacity: 1.0
 
   # Startup Mode (changes require restart)
   #
