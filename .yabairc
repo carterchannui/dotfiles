@@ -14,8 +14,12 @@
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=off
+yabai -m rule --add label="Messages" app="^Messages$" title=".*" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title=".*" manage=off
 yabai -m rule --add label="Stats" app="^Stats$" title=".*" manage=off
+yabai -m rule --add label="Spotify" app="^Spotify$" title=".*" manage=off
 yabai -m rule --add app!="^Alacritty$" border=off
+
 # yabai -m rule --add app=Firefox border=off
 
 # global settings
@@ -49,6 +53,6 @@ yabai -m config top_padding                  12
 yabai -m config bottom_padding               12
 yabai -m config left_padding                 12
 yabai -m config right_padding                12
-yabai -m config window_gap                   06
+yabai -m config window_gap                   12
 
 echo "yabai configuration loaded.."

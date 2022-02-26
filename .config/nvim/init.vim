@@ -1,6 +1,11 @@
 set nowb
 set noswapfile
 set nocompatible
+set autoindent                    " Indent according to previous line.
+set expandtab                     " Use spaces instead of tabs.
+set softtabstop=4                 " Tab key indents by 4 spaces.
+set shiftwidth=4                  " 1 tab == 4 spaces
+set tabstop=4                     " for sure.
 
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -16,7 +21,7 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'navarasu/onedark.nvim'
 " List of Tools
 Plug 'itchyny/lightline.vim'		" Lightline status bar 
-Plug 'tmsvg/pear-tree'			" Pear-tree auto-pair 
+" Plug 'tmsvg/pear-tree'			" Pear-tree auto-pair (kinda buggy with js)
 Plug 'nvim-lua/plenary.nvim'		" Module for async programming
 Plug 'nvim-telescope/telescope.nvim'	" Telescope fuzzy finder
 Plug 'tpope/vim-fugitive'		" Git wrapper
