@@ -5,7 +5,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Aliases
-alias ls="ls -a"
+# alias ls="ls -a"
 alias vim="nvim"
 alias v="nvim"
 
@@ -19,3 +19,5 @@ echo "$(<./.config/wave.txt)"
 # Miscellaneous
 # fortune -s
 eval "$(starship init zsh)"
+
+defaults write -g KeyRepeat -int 2
