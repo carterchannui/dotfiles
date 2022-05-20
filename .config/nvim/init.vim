@@ -1,4 +1,5 @@
 set nowb
+set number
 set noswapfile
 set nocompatible
 set autoindent                    " Indent according to previous line.
@@ -14,23 +15,16 @@ if exists('+termguicolors')
 endif
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-" List of Themes
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'morhetz/gruvbox'
-Plug 'projekt0n/github-nvim-theme'
+" Themes:
 Plug 'navarasu/onedark.nvim'
-" List of Tools
-Plug 'itchyny/lightline.vim'		" Lightline status bar 
-" Plug 'tmsvg/pear-tree'			" Pear-tree auto-pair (kinda buggy with js)
-Plug 'nvim-lua/plenary.nvim'		" Module for async programming
+" List of Tools:
+Plug 'itchyny/lightline.vim'		    " Lightline status bar 
+Plug 'nvim-lua/plenary.nvim'		    " Module for async programming
 Plug 'nvim-telescope/telescope.nvim'	" Telescope fuzzy finder
-Plug 'tpope/vim-fugitive'		" Git wrapper
+Plug 'tpope/vim-fugitive'		        " Git wrapper
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-"Plug 'sheerun/vim-polyglot'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 " Theme: OneDark
@@ -52,10 +46,6 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
-
-"Latex Live Viewer:
-autocmd Filetype tex setl updatetime=1
-let g:livepreview_previewer = 'open -g -a Preview'
 
 "LSP Config:
 lua << EOF
