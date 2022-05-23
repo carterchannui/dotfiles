@@ -23,13 +23,10 @@ yabai -m rule --add label="p1" app="^p1$" title=".*" manage=off
 yabai -m rule --add label="GoodNotes" app="^GoodNotes$" title=".*" manage=on
 yabai -m rule --add app!="^Alacritty$" border=off
 
-
-# yabai -m rule --add app=Firefox border=off
-
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
-yabai -m config window_placement             second_child
+yabai -m config window_placement             first_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                on
 yabai -m config window_opacity               off
