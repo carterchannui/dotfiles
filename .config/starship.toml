@@ -1,7 +1,7 @@
 # ~/.config/starship.toml
 # bg:#242634
 
-format = "[  ](bg:#33343C fg:#ffffff)$directory($git_branch)\n$character"
+format = "[  ](bg:#33343C fg:#ffffff)$directory($git_branch)$python\n$character"
 
 [directory]
 style = "#9cdbfb"
@@ -11,3 +11,6 @@ format = "[](bg:$style fg:#33343C)[  $path ](bg:#9cdbfb fg:#292d3e bold)[�
 style = "#bf94e4"
 format = "\b[](bg:$style fg:#9cdbfb)[ $symbol$branch ](bg:$style fg:#292d3e bold)[](fg:$style)"
 symbol = " "
+
+[python]
+format = '[ (\($virtualenv\))]($style)'

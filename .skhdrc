@@ -102,8 +102,8 @@ alt - 7 : yabai -m space --focus 7
 alt - 8 : yabai -m space --focus 8
 alt - 9 : yabai -m space --focus 9
 
-alt - n : yabai -m space --create
-alt - m : yabai -m space --destroy
+alt - m : yabai -m space --create
+alt - n : yabai -m space --destroy
 
 # swap managed window
 # shift + alt - h : yabai -m window --swap north
@@ -170,5 +170,5 @@ shift + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
 
 # toggle sticky(+float), topmost, picture-in-picture
 # alt - p : yabai -m window --toggle sticky;\
-#           yabai -m window --toggle topmost;\
-#           yabai -m window --toggle pip
+#          yabai -m window --toggle topmost;\
+#          yabai -m window --toggle pip
